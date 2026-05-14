@@ -58,7 +58,7 @@ def poll(fixture):
             if new_events:
                 for e in new_events:
                     seen_event_ids.add((e["time"]["elapsed"], e["player"]["name"]))
-                    publish(fid, "events", new_events)
+                publish(fid, "events", new_events)
         else:
             stats = get_fixture_statistics(fid)
             publish(fid, "statistics", stats)
