@@ -59,7 +59,7 @@ def handle_events(fixture_id, events):
         print(f"\n[fixture {fixture_id}] Score: {teams[0]} {home_score} - {away_score} {teams[1]}")
 
     print("  Recent events:")
-    for event in events[-5:]:
+    for event in events:
         minute = event["time"]["elapsed"]
         etype = event["type"]
         player = event["player"]["name"]

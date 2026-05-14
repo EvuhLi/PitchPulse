@@ -52,6 +52,7 @@ def poll(fixture):
     seen_event_ids = set()
     tick = 0
     while True:
+        print(f"\ntick {tick} — {'events' if tick % 2 == 0 else 'statistics'}")
         if tick % 2 == 0:
             events = get_fixture_events(fid)
             new_events = [e for e in events if (e["time"]["elapsed"], e["player"]["name"]) not in seen_event_ids]
